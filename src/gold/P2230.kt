@@ -41,3 +41,5 @@ fun solution(M: Int, arr: ArrayList<Int>): Int {
     }
     return min
 }
+
+fun max(a:Int, b:Int) = if(a>b) a else b
