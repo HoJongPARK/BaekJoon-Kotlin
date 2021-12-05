@@ -1,27 +1,25 @@
 package gold
 
+import java.lang.IllegalStateException
+
 class Car() {
-    var carNumber: Int = 0
+    var carNumber: Int? = 0
     var name: String = ""
 
-    constructor(carNumber: Int, name: String) : this() {
+    constructor(carNumber: Int?, name: String) : this() {
         this.carNumber = carNumber
         this.name = name
     }
 }
 
-data class Bus(
-    val name: String,
-    val busNumber: Int
-)
-
-object constObject {
-    const val ONE = 1
-    const val TWO = 2
-    var THREE = 3
-    fun isThreeCorrect() = THREE == 3
-}
-
 fun main(args: Array<String>) {
-    println(constObject.ONE)
+    val car = Car(null, "Hi")
+    car.carNumber?.let { value ->
+        print("car Number is $value") //carNumber가 null 이기 때문에 실행되지 않는다.
+    }
+    car.carNumber = 1
+    car.carNumber?.let { value ->
+        print("car Number is $value") //carNumber가 1이기 때문에 해당 구문이 실행된다.
+    }
 }
+
