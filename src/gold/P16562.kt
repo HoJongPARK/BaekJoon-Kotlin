@@ -3,7 +3,7 @@ package gold
 import java.util.*
 
 lateinit var friendCost: Array<Int>
-lateinit var parent: Array<Int>
+private lateinit var parent: Array<Int>
 fun main(args: Array<String>) {
     val input = StringTokenizer(readLine())
     val N = Integer.parseInt(input.nextToken()) //학생 수
