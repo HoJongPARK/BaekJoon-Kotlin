@@ -2,9 +2,9 @@ package gold
 
 import java.util.*
 
-val map = Array(101) { Array(101) { 0 } }
+private val map = Array(101) { Array(101) { 0 } }
 
-val dxDy = mapOf(
+private val dxDy = mapOf(
     0 to Pair(1, 0),
     1 to Pair(0, -1),
     2 to Pair(-1, 0),

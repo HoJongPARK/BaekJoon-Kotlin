@@ -47,6 +47,6 @@ private val dxDy = mapOf(
     1 to Pair(0, 1)
 )
 
-fun canVisit(x: Int, y: Int, N: Int, M: Int) = x >= 0 && y >= 0 && x < M && y < N
+private fun canVisit(x: Int, y: Int, N: Int, M: Int) = x >= 0 && y >= 0 && x < M && y < N
 private lateinit var dp: Array<Array<Int>>
 
