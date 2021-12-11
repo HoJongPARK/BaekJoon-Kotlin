@@ -26,7 +26,7 @@ fun main() {
 fun addInt(a: Int, b: Int): Double = a.toDouble() + b.toDouble()
 fun addDouble(a: Double, b: Double) = a + b
 
-fun <T> addToDouble(a: T, b: T) = a.toString().toDouble() + b.toString().toDouble()
+fun <T:Number> addToDouble(a: T, b: T) = a.toDouble() + b.toDouble()
 
 fun <T, R> T.map(mapper: (T) -> R): R {
     return mapper(this)
