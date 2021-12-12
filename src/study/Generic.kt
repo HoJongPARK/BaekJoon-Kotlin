@@ -19,6 +19,7 @@ fun main() {
     val d: Double = 13.4
     print(addToDouble<Int>(a, b))
     print(addToDouble<Double>(c, d))
+    print(addToDouble(12312512L, 123123))
 
 
 }
@@ -26,7 +27,7 @@ fun main() {
 fun addInt(a: Int, b: Int): Double = a.toDouble() + b.toDouble()
 fun addDouble(a: Double, b: Double) = a + b
 
-fun <T:Number> addToDouble(a: T, b: T) = a.toDouble() + b.toDouble()
+fun <T : Number> addToDouble(a: T, b: T) = a.toDouble() + b.toDouble()
 
 fun <T, R> T.map(mapper: (T) -> R): R {
     return mapper(this)
@@ -44,3 +45,4 @@ class Pair<A, B>(val first: A, val second: B) {
         return 100
     }
 }
+
